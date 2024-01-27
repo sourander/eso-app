@@ -1,0 +1,70 @@
+# yyyy/m/d
+reference_date: "2024-01-24"
+
+difficulties:
+  easy:
+    giver: Maj
+    reference: Darkshade Caverns I
+    dungeons:
+      - Spindleclutch II
+      - Banished Cells I
+      - Fungal Grotto II
+      - Spindleclutch I
+      - Darkshade II
+      - Elden Hollow I
+      - Wayrest Sewers II
+      - Fungal Grotto I
+      - Banished Cells II
+      - Darkshade Caverns I
+      - Elden Hollow II
+      - Wayrest Sewers I
+
+  mid:
+    giver: Glirion
+    reference: Crypt of Hearts I
+    dungeons:
+      - Direfrost Keep
+      - Vaults of Madness
+      - Crypt of Hearts II
+      - City of Ash I
+      - Tempest Island
+      - Blackheart Haven
+      - Arx Corinium
+      - Selene's Web
+      - City of Ash II
+      - Crypt of Hearts I
+      - Volenfell
+      - Blessed Crucible
+
+  dlc:
+    giver: Urgarlag
+    reference: Fang Lair
+    dungeons:
+      - Imperial City Prison
+      - Ruins of Mazzatun
+      - White-Gold Tower
+      - Cradle of Shadows
+      - Bloodroot Forge
+      - Falkreath Hold
+      - Fang Lair
+      - Scalecaller Peak
+      - Moon Hunter Keep
+      - March of Sacrifices
+      - Depths of Malatar
+      - Frostvault
+      - Moongrave Fane
+      - Lair of Maarselok
+      - Icereach
+      - Unhallowed Grave
+      - Stone Garden
+      - Castle Thorn
+      - Black Drake Villa
+      - The Cauldron
+      - Red Petal Bastion
+      - The Dread Cellar
+      - Coral Aerie
+      - Shipwright's Regret
+      - Earthen Root Enclave
+      - Graven Deep
+      - Bal Sunner
+      - Scrivener's Hall
