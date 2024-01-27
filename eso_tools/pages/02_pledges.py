@@ -55,7 +55,7 @@ def main():
     #     suggestions = difflib.get_close_matches(query, easy.dungeons + mid.dungeons + dlc.dungeons)
 
     # Multichoise selector
-    selected = st.multiselect("Select dungeon (Search by writing)", easy.dungeons + mid.dungeons + dlc.dungeons, max_selections=5)
+    selected = st.multiselect("Select dungeon (Search by writing)", easy.dungeons + mid.dungeons + dlc.dungeons, max_selections=1)
 
     if selected:
 
