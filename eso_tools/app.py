@@ -12,13 +12,11 @@ def run():
 
     st.write("# Welcome to ESO Tools! 👋")
 
-    st.sidebar.success("Select a demo above.")
+    with open("eso_tools/docs/app_py.md", "r") as f:
+        st.markdown(f.read())
 
-    st.markdown(
-    """
-        Type some markdown stuff here.
-    """
-    )
+    st.sidebar.success("⬆️ Select a tool above.")
+    
 
 
 if __name__ == "__main__":

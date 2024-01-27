@@ -20,7 +20,7 @@ def main():
     st.markdown(f"""
         As of now, there are total of {n_total} dungeons in ESO. 
         
-        They are given by three pledge givers, each giving a different set of dungeons:
+        They are given by three NPC's, each giving a different set of dungeons. This tool will print the today's dungeon and the chosen amount of following days' dungeons.
         
         * **{easy.giver}**: {n_e} dungeons, 
         * **{mid.giver}**: {n_m} dungeons, 
@@ -55,7 +55,7 @@ def main():
     #     suggestions = difflib.get_close_matches(query, easy.dungeons + mid.dungeons + dlc.dungeons)
 
     # Multichoise selector
-    selected = st.multiselect("Select dungeon", easy.dungeons + mid.dungeons + dlc.dungeons, max_selections=5)
+    selected = st.multiselect("Select dungeon (Search by writing)", easy.dungeons + mid.dungeons + dlc.dungeons, max_selections=5)
 
     if selected:
 
