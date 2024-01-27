@@ -112,7 +112,7 @@ def append_checkbox_buffs(buffs: list[PenetrationBuff]):
 def append_set_buffs(penetration_buffs: list[PenetrationBuff]):
     st.divider()
     st.subheader("Any sets with penetration?")
-    selected_sets = st.multiselect("Sets worn", list(SET_OPTIONS.keys()))
+    selected_sets = st.multiselect("Sets worn", list(SET_OPTIONS.keys()), max_selections=3)
 
     # Calculate penetration from selected sets
     for set_name in selected_sets:
