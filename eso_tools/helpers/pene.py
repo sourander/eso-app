@@ -37,13 +37,19 @@ def append_checkbox_buffs(buffs: list[PenetrationBuff]):
         add_basic_checkbox_buff(buffs, "Major Breach", MAJOR_BREACH)
         add_basic_checkbox_buff(buffs, "Minor Breach", MINOR_BREACH)
         add_basic_checkbox_buff(buffs, "Arcanist Tank (Runic Sunder)", RUNIC_SUNDER)
-        add_two_choice_checkbox_buff(
-            buffs,
-            "Crusher Enchant",
-            "Type",
-            [("Infused", 1638), ("Infused + Torug's Pact", 3276)],
-        )
-        add_basic_checkbox_buff(buffs, "Tremorscale", TREMORSCALE, default=False)
+        add_basic_checkbox_buff(buffs, "Crusher Enchant (Infused)", CRUSHER_INFUSED)
+        # add_basic_checkbox_buff(buffs, "Tremorscale", TREMORSCALE, default=False)
+
+        if st.checkbox("Tremorscale", value=False):
+            n = st.slider("Tank resistance:", min_value=30000, max_value=35000, value=33000, step=100)
+            slope = 0.079998
+            bias = -58.69
+            buffs.append(
+                PenetrationBuff(
+                    name =f"Tremorscale ({n / 1000}k resistance)",
+                    penetration = int(n * slope + bias),
+                )
+            )
 
         st.subheader("Other DDs")
 
