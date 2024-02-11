@@ -8,7 +8,7 @@ SHARP_2H = 3276
 MACE_1H = 1487
 MACE_2H = 2974
 CP_PASS = 700
-CRUSHER_INFUSED = 1638
+CRUSHER_INFUSED = 2108
 
 # Set options and corresponding penetration values
 SET_OPTIONS = {
