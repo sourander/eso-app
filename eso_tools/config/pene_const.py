@@ -21,4 +21,5 @@ SET_OPTIONS = {
     "Runecarver's": 1487,
     "Unfathomable Darkness": 1487,
     "Two-Fanged Snake": 5440,
+    "Velothi Ur-Mage's": 1650
 }
