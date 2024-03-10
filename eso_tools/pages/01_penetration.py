@@ -12,7 +12,7 @@ def main():
     st.markdown(
         """
         This tool calculates the total penetration you have on a target. It is meant to be used for PvE content.
-        Choose the modifiers from below. You can see the results by browsing down. The target is expected to have 18000 resistance.
+        Choose the modifiers from below. You can see the results by browsing down. The target is expected to have 18200 resistance.
     """
     )
 
