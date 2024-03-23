@@ -12,14 +12,9 @@ CRUSHER_INFUSED = 2108
 
 # Set options and corresponding penetration values
 SET_OPTIONS = {
+    "Perfected Arena Weapon": 1190,
     "Spinner": 3460,
     "Spriggan": 3460,
-    "Tzogvin": 1487,
-    "Kra'gh's": 1487,
-    "Ansuul's": 1487,
-    "Grisly Gourmet's": 1487,
-    "Runecarver's": 1487,
-    "Unfathomable Darkness": 1487,
     "Two-Fanged Snake": 5440,
     "Velothi Ur-Mage's": 1650
 }

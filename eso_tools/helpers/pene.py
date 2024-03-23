@@ -36,7 +36,7 @@ def append_checkbox_buffs(buffs: list[PenetrationBuff]):
 
         add_basic_checkbox_buff(buffs, "Major Breach", MAJOR_BREACH)
         add_basic_checkbox_buff(buffs, "Minor Breach", MINOR_BREACH)
-        add_basic_checkbox_buff(buffs, "Arcanist Tank (Runic Sunder)", RUNIC_SUNDER)
+        add_basic_checkbox_buff(buffs, "Arcanist Tank (Runic Sunder)", RUNIC_SUNDER, default=False)
         add_basic_checkbox_buff(buffs, "Crusher Enchant (Infused)", CRUSHER_INFUSED)
         # add_basic_checkbox_buff(buffs, "Tremorscale", TREMORSCALE, default=False)
 
@@ -88,12 +88,12 @@ def append_checkbox_buffs(buffs: list[PenetrationBuff]):
 
         st.subheader("Your class or race")
 
-        add_basic_checkbox_buff(buffs, "Bosmer race (Wood Elf)", 950, default=False)
+        add_basic_checkbox_buff(buffs, "You are a Bosmer (Wood Elf)", 950, default=False)
         add_basic_checkbox_buff(
-            buffs, "Nightblade flanking (Master assassin)", 2974, default=False
+            buffs, "You are a Nightblade and flanking", 2974, default=False
         )
         add_basic_checkbox_buff(
-            buffs, "Necro Grave Lord ability (Dismember)", 1500, default=False
+            buffs, "You have a Necro Grave Lord ability slotted", 1500, default=False
         )
 
         # Calculate penetration from light armor pieces
@@ -117,9 +117,25 @@ def append_checkbox_buffs(buffs: list[PenetrationBuff]):
 
 def append_set_buffs(penetration_buffs: list[PenetrationBuff]):
     st.divider()
-    st.subheader("Any sets with penetration?")
-    selected_sets = st.multiselect("Sets worn", list(SET_OPTIONS.keys()), max_selections=3)
+    st.subheader("Typical set pieces with penetration")
+    st.write("""
+        Many sets have a typical 1-piece bonus being 1487 penetration. These sets include e.g. Tzogvin,
+        Kra'gh, Ansuul, Runecarver, and many others.
+        How many of these set bonuses are you wearing?
+    
+    """)
+    n = st.slider("Penetration bonuses", 0, 5, 0)
+    penetration_buffs.append(
+        PenetrationBuff(
+            name=f"Typical set ({n} bonuses)",
+            penetration=1487 * n,
+        )
+    )
 
+    st.divider()
+
+    st.subheader("Any special sets with penetration?")
+    selected_sets = st.multiselect("Sets worn", list(SET_OPTIONS.keys()), max_selections=3)
     # Calculate penetration from selected sets
     for set_name in selected_sets:
         if set_name in SET_OPTIONS:

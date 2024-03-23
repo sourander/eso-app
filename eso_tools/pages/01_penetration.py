@@ -44,8 +44,8 @@ def main():
     )
     st.markdown(
         """    
-        The large number is the total penetration you have. The small number is the remaining resistance of the target.
-        Choose your penetration modifiers from the main site's checkboxes and other inputs.
+        The large number is the total penetration you have. The small number indicated the difference. If the text is RED,
+        you are lacking this much penetration. If it is GREEN, you are overpenetrating.
     """
     )
 
