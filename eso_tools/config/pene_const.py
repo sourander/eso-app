@@ -9,6 +9,7 @@ MACE_1H = 1487
 MACE_2H = 2974
 CP_PASS = 700
 CRUSHER_INFUSED = 2108
+LIGHT_ARMOR_PASSIVE = 939
 
 # Set options and corresponding penetration values
 SET_OPTIONS = {

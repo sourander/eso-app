@@ -153,7 +153,7 @@ def append_light_armor_buffs(penetration_buffs: list[PenetrationBuff]):
     n = st.slider("# Light Armor Pieces", min_value=0, max_value=7, value=1, step=1)
 
     # Calculate penetration from light armor pieces
-    light_armor_penetration = n * 207
+    light_armor_penetration = n * LIGHT_ARMOR_PASSIVE
     penetration_buffs.append(
         PenetrationBuff(
             name=f"{n} Light Armor Pieces", penetration=light_armor_penetration
